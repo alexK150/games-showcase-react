@@ -1,11 +1,11 @@
 import React from 'react';
-import {Card, CardContent} from "./login-styles";
+import {LoginCard, LoginCardContent} from "./login-styles";
 
 function Login (props){
   return (
-    <Card>
-      <CardContent>Content</CardContent>
-    </Card>
+    <LoginCard>
+      <LoginCardContent>Content</LoginCardContent>
+    </LoginCard>
   )
 }
 

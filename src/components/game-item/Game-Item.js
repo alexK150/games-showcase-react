@@ -1,9 +1,19 @@
 import React from 'react';
+import {GameCard} from "../games-page/GamesStyles";
 
-function GameItem(props) {
-
+function GameItem({game: {name, released, background_image, rating}}) {
   return (
-    <div>Movie Item</div>
+    <GameCard back={background_image}>
+      <div className={'game-description'}>
+        <div className={'game-title'}>
+          <h4>{name}</h4>
+        </div>
+        <div className={'game-info'}>
+          <p>{released}</p>
+          <span>{rating}</span>
+        </div>
+      </div>
+    </GameCard>
   )
 }
 

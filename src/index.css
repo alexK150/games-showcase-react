@@ -1,5 +1,30 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.game-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.game-info {
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.game-title {
+    margin: 5px;
+}
+
+.game-description {
+    position: absolute;
+    bottom: 0;
+    background-color: cornflowerblue;
+    width: 100%;
 }
 
 @media only screen and (min-width: 768px) {
@@ -7,11 +32,13 @@
         font-size: 16px;
     }
 }
+
 @media only screen and (min-width: 480px) and (max-width: 768px) {
     body {
         font-size: 15px;
     }
 }
+
 @media only screen and (max-width: 479px) {
     body {
         font-size: 14px;

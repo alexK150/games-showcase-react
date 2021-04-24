@@ -11,11 +11,11 @@ function GamesPage(props) {
     setGames(gamesData.results);
   }, [])
   return (
-    <div>
+    <div className={'game-container'}>
       {
-        games.map(game => (
-            <GameItem key={game.id}/>
-          )
+        games.map(game => {
+           return <GameItem key={game.id} game={game}/>
+        }
         )
       }
     </div>
