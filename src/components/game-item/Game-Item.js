@@ -1,19 +1,25 @@
 import React from 'react';
 import {GameCard} from "../games-page/GamesStyles";
+import {Link} from "react-router-dom";
 
-function GameItem({game: {name, released, background_image, rating}}) {
+function GameItem({game}) {
   return (
-    <GameCard back={background_image}>
-      <div className={'game-description'}>
-        <div className={'game-title'}>
-          <h4>{name}</h4>
+    <div>
+      <GameCard back={game.background_image}>
+        <div className={'game-description'}>
+          <div className={'game-title'}>
+            <h4>{game.name}</h4>
+          </div>
+          <div className={'game-info'}>
+            <p>{game.released}</p>
+            <span>{game.rating}</span>
+          </div>
+          <div className={'game-overview'}>
+            <Link to={`games/${game.slug}`}>More info</Link>
+          </div>
         </div>
-        <div className={'game-info'}>
-          <p>{released}</p>
-          <span>{rating}</span>
-        </div>
-      </div>
-    </GameCard>
+      </GameCard>
+    </div>
   )
 }
 
