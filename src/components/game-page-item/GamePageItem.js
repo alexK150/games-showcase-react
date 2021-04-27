@@ -1,17 +1,23 @@
 import React from 'react';
-import {withRouter} from 'react-router';
+import Slider from "../new-slider/Slider";
 
-function GamePageItem(props) {
-  let gamePage = [];
+function GamePageItem({currentGamePage}) {
   return (
-    <div>
-      {gamePage.push(props.games.filter((game)=>{
-        return Object.keys(props.match.params).find(key => props.match.params[key] === game.slug);
-      }))}
-      {console.log(gamePage)}
-
-    </div>
+    <>
+      <Slider currentGamePage={currentGamePage}/>
+      <div>
+        <h1>{currentGamePage.name}</h1>
+        <a href={`https://rawg.io/games/${currentGamePage.slug}`}>Look on website {currentGamePage.name}</a>
+        <div>Description:
+          {
+            currentGamePage.genres.map((el) => {
+              return <span key={el.id}>{el.name} </span>
+            })
+          }
+        </div>
+      </div>
+    </>
   );
 }
 
-export default withRouter(GamePageItem);
+export default GamePageItem;

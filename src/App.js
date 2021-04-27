@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from 'react';
 import {Route} from "react-router";
+import GamesPage from "./components/games-page/GamesPage";
+import GamePageItem from "./components/game-page-item/GamePage";
+import {gameApi} from "./components/api-info";
 // import Login from "./components/login-page/Login";
 
 import './App.css';
-import GamesPage from "./components/games-page/GamesPage";
-import GamePageItem from "./components/game-page-item/GamePageItem";
-import {gameApi} from "./components/api-info";
 
 function App() {
   const [games, setGames] = useState([]);
