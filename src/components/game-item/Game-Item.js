@@ -15,7 +15,7 @@ function GameItem({game}) {
             <span>{game.rating}</span>
           </div>
           <div className={'game-overview'}>
-            <Link to={`games/${game.slug}`}>More info</Link>
+            <Link to={`${game.slug}`}>More info</Link>
           </div>
         </div>
       </GameCard>

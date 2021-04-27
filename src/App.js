@@ -21,8 +21,8 @@ function App() {
 
   return (
     <div className="App">
-      <Route exact path={'/games'}><GamesPage games={games}/></Route>
-      <Route path={'/games/:slug'}><GamePageItem games={games}/></Route>
+      <Route exact path={'/'}><GamesPage games={games}/></Route>
+      <Route path={'/:slug'}><GamePageItem games={games}/></Route>
       {/*<Route exact path={'/'}>*/}
       {/*  <Login/>*/}
       {/*</Route>*/}
