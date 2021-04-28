@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {MdKeyboardArrowRight, MdKeyboardArrowLeft} from 'react-icons/md'
+import {MdKeyboardArrowRight, MdKeyboardArrowLeft} from 'react-icons/md';
 
 function Slider({currentGamePage}) {
   const [current, setCurrent] = useState(0);
@@ -10,7 +10,7 @@ function Slider({currentGamePage}) {
   }
 
   const prevSlide = () => {
-    setCurrent(current === 0 ? length -1 : current - 1)
+    setCurrent(current === 0 ? length - 1 : current - 1)
   }
 
   return (

@@ -4,18 +4,18 @@ import {Link} from "react-router-dom";
 
 function GameItem({game}) {
   return (
-    <div>
+    <div className={'game-container__game-item'}>
       <GameCard back={game.background_image}>
         <div className={'game-description'}>
           <div className={'game-title'}>
-            <h4>{game.name}</h4>
+            <h4>Title: {game.name}</h4>
           </div>
           <div className={'game-info'}>
-            <p>{game.released}</p>
+            <p>Released: {game.released}</p>
             <span>{game.rating}</span>
           </div>
           <div className={'game-overview'}>
-            <Link to={`${game.slug}`}>More info</Link>
+            <Link to={`${game.slug}`} className={'link-btn'}>More info</Link>
           </div>
         </div>
       </GameCard>

@@ -9,11 +9,11 @@ export const Pagination = ({gamesPerPage, totalGamesNumber, paginate}) => {
   }
 
   return (
-    <nav>
-      <ul className={'pagination'}>
+    <nav className={'game-header__pagination'}>
+      <ul className={'pagination-ul'}>
         {pageNumbers.map((number) => (
-          <li key={number} className={'page-item'}>
-            <Link to={`/`} onClick={() => paginate(number)} className={'page-link'}>
+          <li key={number}>
+            <Link to={`/`} onClick={() => paginate(number)}>
               {number}
             </Link>
           </li>

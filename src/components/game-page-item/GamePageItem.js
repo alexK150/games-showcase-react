@@ -5,7 +5,7 @@ function GamePageItem({currentGamePage}) {
   return (
     <>
       <Slider currentGamePage={currentGamePage}/>
-      <div>
+      <div className={'game-page-item__info'}>
         <h1>{currentGamePage.name}</h1>
         <a href={`https://rawg.io/games/${currentGamePage.slug}`}>Look on website {currentGamePage.name}</a>
         <div>Description:

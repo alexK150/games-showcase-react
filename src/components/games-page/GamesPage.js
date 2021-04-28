@@ -25,7 +25,6 @@ function GamesPage({games}) {
 
   // Sorting
   const handleSort = (e) => {
-    console.log(e.target.value)
     setSort(e.target.value);
   }
 
@@ -40,18 +39,21 @@ function GamesPage({games}) {
   }
 
   return (
-    <div className={'game-container'}>
-      <div>
-        <Pagination totalGamesNumber={games.length} gamesPerPage={gamesPerPage} paginate={paginate}/>
+    <div>
+      <div className={'games-header'}>
+        <h1 className={'game-header__title'}>Games For You</h1>
         <Search setSearch={setSearch}/>
         <Sort handleSort={handleSort}/>
+        <Pagination totalGamesNumber={games.length} gamesPerPage={gamesPerPage} paginate={paginate}/>
       </div>
-      {
-        filteredGames.map(game => {
-            return <GameItem key={game.id} game={game}/>
-          }
-        )
-      }
+      <div className={'games-container'}>
+        {
+          filteredGames.map(game => {
+              return <GameItem key={game.id} game={game}/>
+            }
+          )
+        }
+      </div>
     </div>
   );
 }
